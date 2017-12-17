@@ -6,7 +6,6 @@ export const App = () => (
     <Navigation />
     <div className="container">
       <Welcome />
-      <div>Webpack + React 16 + Flask-Webpack + Docker</div>
       <Counter />
       <Foods />
       <Image />

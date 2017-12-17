@@ -5,9 +5,9 @@ import { Nav, NavItem, Navbar } from 'react-bootstrap/lib';
 export const Navigation = () => (
   <Navbar collapseOnSelect>
     <Navbar.Header>
-      <Navbar.Brand>
-        <a href="/">wellio boilerplate</a>
-      </Navbar.Brand>
+      <LinkContainer to="/">
+        <Navbar.Brand role="button">wellio boilerplate</Navbar.Brand>
+      </LinkContainer>
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>

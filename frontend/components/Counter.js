@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Counter extends Component {
+export class Counter extends Component {
   state = { counter: 0 };
 
   componentDidMount() {

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Foods, Page } from '.';
 
-export const APICall = () => (
+const APICall = () => (
   <Page>
     <Foods />
   </Page>
 );
+
+export default APICall;

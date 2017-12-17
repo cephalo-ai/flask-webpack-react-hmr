@@ -1,8 +1,10 @@
 import React from 'react';
 import { Counter, Page } from '.';
 
-export const ComponentState = () => (
+const ComponentState = () => (
   <Page>
     <Counter />
   </Page>
 );
+
+export default ComponentState;

@@ -1,6 +1,15 @@
 import React from 'react';
+import Async from 'react-code-splitting';
 import { Switch, Route } from 'react-router-dom';
-import { Home, ComponentState, APICall, UIInteraction } from './components';
+import { Home } from './components';
+
+const ComponentState = () => (
+  <Async load={import('./components/ComponentState')} />
+);
+const APICall = () => <Async load={import('./components/APICall')} />;
+const UIInteraction = () => (
+  <Async load={import('./components/UIInteraction')} />
+);
 
 export const App = () => (
   <Switch>

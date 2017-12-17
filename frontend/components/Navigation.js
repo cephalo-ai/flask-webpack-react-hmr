@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Nav, NavItem, Navbar } from 'react-bootstrap/lib';
 
 export const Navigation = () => (
@@ -10,7 +11,9 @@ export const Navigation = () => (
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
-        <NavItem>First Nav</NavItem>
+        <NavItem>
+          <Link to="/component-state">Component State</Link>
+        </NavItem>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

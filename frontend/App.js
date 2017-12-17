@@ -1,14 +1,12 @@
 import React from 'react';
-import { Counter, Foods, Image, Navigation, Welcome } from './components';
+import { Switch, Route } from 'react-router-dom';
+import { Counter, Foods, Home, Image, Navigation, Welcome } from './components';
 
 export const App = () => (
-  <div className="app">
-    <Navigation />
-    <div className="container">
-      <Welcome />
-      <Counter />
-      <Foods />
-      <Image />
-    </div>
-  </div>
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/component-state" component={Counter} />
+    <Route path="/api-call" component={Foods} />
+    <Route path="/ui-interaction" component={Image} />
+  </Switch>
 );

@@ -1,11 +1,8 @@
 import React from 'react';
-import { Navigation, Welcome } from '.';
+import { Page, Welcome } from '.';
 
 export const Home = () => (
-  <div className="app">
-    <Navigation />
-    <div className="container">
-      <Welcome />
-    </div>
-  </div>
+  <Page>
+    <Welcome />
+  </Page>
 );

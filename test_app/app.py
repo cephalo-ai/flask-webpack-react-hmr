@@ -50,8 +50,13 @@ class FoodsResource(Resource):
         return {'id': str(uuid.uuid4()), 'name': random.choice(foods)}
 
 
-@app.route('/')
-def index():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def index(path):
+    """Route to serve the entryfile
+
+    Serves the same template to all sub-paths so React Router can take over
+    """
     return render_template('index.jinja2')
 
 

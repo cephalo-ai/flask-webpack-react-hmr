@@ -54,3 +54,5 @@ docker-compose run webpack-dev npm i <foo> --save-dev
 - Redux
 - [Redux Thunk](https://github.com/gaearon/redux-thunk)
 - [Redux Swagger Client](https://github.com/noh4ck/redux-swagger-client)
+- [React Bootstrap](https://react-bootstrap.github.io/)
+- [React Router](https://reacttraining.com/react-router/)

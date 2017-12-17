@@ -1,20 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Button } from 'react-bootstrap/lib';
 import * as fromImage from '../reducers/ui/image/api';
 import noIdea from '../../assets/images/dog/no-idea.jpg';
 
 const Image = ({ isImageShown, toggleImage }) => (
-  <div className="container">
-    <div
+  <div>
+    <Button
       onClick={toggleImage}
       onKeyDown={toggleImage}
       role="button"
       tabIndex={0}
     >
       Toggle image
-    </div>
-    {isImageShown && <img alt="dog typing" src={noIdea} />}
+    </Button>
+    {isImageShown && (
+      <div>
+        <img alt="dog typing" src={noIdea} />
+      </div>
+    )}
   </div>
 );
 

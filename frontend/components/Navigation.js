@@ -14,6 +14,12 @@ export const Navigation = () => (
         <LinkContainer to="/component-state">
           <NavItem>Component State</NavItem>
         </LinkContainer>
+        <LinkContainer to="/api-call">
+          <NavItem>API Call</NavItem>
+        </LinkContainer>
+        <LinkContainer to="/ui-interaction">
+          <NavItem>UI Interaction</NavItem>
+        </LinkContainer>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
+export class Counter extends Component {
   state = { counter: 0 };
 
   componentDidMount() {
     this.interval = setInterval(this.increment.bind(this), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   increment() {
@@ -13,20 +17,9 @@ export default class App extends Component {
     });
   }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
   render() {
     const { counter } = this.state;
 
-    return (
-      <header>
-        <div>Webpack + React 16 + Flask-Webpack + Docker</div>
-        <div>
-          {counter}
-        </div>
-      </header>
-    );
+    return <div>{counter}</div>;
   }
 }

@@ -1,6 +1,3 @@
-body {
-    text-align: center;
-    font-size: 42px;
-    color: #adff2f;
-    background-color: #ff1493;
+.margin-bottom-sm {
+  margin-bottom: 10px;
 }

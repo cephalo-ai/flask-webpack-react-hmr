@@ -1,15 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Button, Col, Grid, Row } from 'react-bootstrap/lib';
 import * as fromFoods from '../reducers/entities/foods/api';
 
 const Foods = ({ addFood, foods }) => (
-  <div className="container">
-    <div onClick={addFood} onKeyDown={addFood} role="button" tabIndex={0}>
-      Add a food
-    </div>
-    <ul>{foods.map(food => <li key={food.id}>{food.name}</li>)}</ul>
-  </div>
+  <Grid>
+    <Col>
+      <Row className="margin-bottom-sm">
+        <Button
+          onClick={addFood}
+          onKeyDown={addFood}
+          role="button"
+          tabIndex={0}
+        >
+          Add a food
+        </Button>
+      </Row>
+    </Col>
+    {!!foods.length && (
+      <Grid>
+        <Col>
+          <Row>
+            <p>Foods:</p>
+            <ul>{foods.map(food => <li key={food.id}>{food.name}</li>)}</ul>
+          </Row>
+        </Col>
+      </Grid>
+    )}
+  </Grid>
 );
 
 Foods.propTypes = {

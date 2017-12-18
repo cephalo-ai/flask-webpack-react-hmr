@@ -18,7 +18,7 @@ RUN npm install webpack-dev-server -g
 
 RUN cd /fork-project && \
     npm install && \
-    webpack --config=webpack.prod.js
+    npm run build
 
 WORKDIR /fork-project/
 

@@ -1,6 +1,6 @@
-var path = require('path');
-var ManifestRevisionPlugin = require('manifest-revision-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const ManifestRevisionPlugin = require('manifest-revision-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -47,10 +47,6 @@ module.exports = {
 
   devServer: {
     headers: { 'Access-Control-Allow-Origin': '*' },
-    //hot: true,
-    //inline: true,
-    //contentBase: "build/public",
-    //port: 2992
   },
 
   plugins: [
